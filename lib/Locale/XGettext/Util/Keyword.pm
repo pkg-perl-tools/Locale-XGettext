@@ -152,7 +152,7 @@ sub dump {
     $dump .= $self->context . 'c,' if $self->context;
     $dump .= $self->singular . ',';
     $dump .= $self->plural . ',' if $self->plural;
-    $dump .+ '"' . $self->comment . '",';
+    $dump .= '"' . $self->comment . '",' if $self->comment;
 
     chop $dump;
 
